@@ -1,0 +1,1031 @@
+<table border="1">
+<tr>
+<td></td> <td colspan="2">Generic</td> <td colspan="2">SSE</td> <td colspan="2">AVX</td> <td colspan="2">NEON</td>
+</tr>
+<tr>
+<td>Kernel</td> <td>u</td> <td>a</td> <td>u</td> <td>a</td> <td>u</td> <td>a</td> <td>u</td> <td>a</td>
+</tr>
+<tr>
+  <td>32fc_conjugate_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+</tr>
+<tr>
+  <td>32fc_s32fc_x2_rotator_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>64u_popcnt</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_multiply_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">3</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8i_convert_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_power_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_max_star_horizontal_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_dot_prod_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_32f_dot_prod_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">3</td>
+</tr>
+<tr>
+  <td>64f_x2_min_64f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_s32f_convert_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_s32f_interleave_16ic</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_deinterleave_real_64f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_dot_prod_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">3</td>
+  <td bgcolor="green">4</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">4</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8u_conv_k7_r2puppet_8u</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_deinterleave_16i_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_deinterleave_imag_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16u_byteswap</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32i_x2_and_32i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_normalize</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_convert_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_convert_8i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_s32f_square_dist_scalar_mult_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_deinterleave_32f_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_multiply_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8u_x4_conv_k7_r2_8u</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_power_spectrum_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_multiply_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32u_byteswap</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_s32f_magnitude_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_convert_64f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_binary_slicer_8i</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_x5_add_quad_16i_x4</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_min_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32i_s32f_convert_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_subtract_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_deinterleave_64f_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_32fc_dot_prod_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>64f_x2_max_64f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8i_s32f_convert_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_magnitude_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_multiply_conjugate_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_divide_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_deinterleave_real_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32i_x2_or_32i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_magnitude_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_invsqrt_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_deinterleave_real_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_index_max_16u</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_add_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_stddev_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_magnitude_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_calc_spectral_noise_floor_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_deinterleave_real_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_branch_4_state_8</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_binary_slicer_32i</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_max_star_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_atan2_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_interleave_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>64f_convert_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_dot_prod_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">3</td>
+  <td bgcolor="green">3</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">4</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32fc_multiply_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_square_dist_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_deinterleave_real_8i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_power_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_deinterleave_16i_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_stddev_and_mean_32f_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_32f_multiply_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_permute_and_scalar_add</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_convert_32i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_magnitude_squared_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_x2_multiply_conjugate_16ic</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_sqrt_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_s32f_deinterleave_32f_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_s32f_deinterleave_real_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_x2_s32f_multiply_conjugate_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_accumulator_s32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16i_x4_quad_max_star_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_s32f_deinterleave_real_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_s32f_32f_fm_detect_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>16ic_s32f_deinterleave_32f_x2</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x3_sum_of_poly_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+</tr>
+<tr>
+  <td>16i_convert_8i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32fc_rotatorpuppet_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_x2_conjugate_dot_prod_32fc</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>8ic_deinterleave_real_8i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_x2_max_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>64u_byteswap</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_index_max_16u</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">2</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_deinterleave_real_16i</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32f_tanh_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32fc_s32f_x2_power_spectral_density_32f</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+<tr>
+  <td>32u_popcnt</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="green">1</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+  <td bgcolor="red">0</td>
+</tr>
+</table>
