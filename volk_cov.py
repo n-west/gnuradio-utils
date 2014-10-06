@@ -9,8 +9,8 @@ import subprocess
 def main():
     desc = 'Create an html table showing ISA coverage for VOLK'
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument('--volk_root', type=str, default=None, required=True,
-                            help='The volk root (/opt/code/gnuradio/volk)')
+    parser.add_argument('--gr_root', type=str, default=None, required=True,
+                            help='The volk root (/opt/code/gnuradio)')
     parser.add_argument('--namespace', type=str, default='volk',
                             help='The volk namespace')
     parser.add_argument('--isa_list', type=str, nargs='*', default=['generic', 'sse', 'avx', 'neon'],
@@ -19,9 +19,11 @@ def main():
                             help='The filename to write the table to')
 
     args = parser.parse_args()
+    gr_root = args.gr_root
 
     cwd = getcwd()
-    chdir(args.volk_root)
+    volk_root = gr_root + '/volk'
+    chdir(volk_root)
     p = subprocess.Popen(["git", "describe"], stdout=subprocess.PIPE)
     version_string = re.sub('git.*$', '', p.communicate()[0])
     version_string = re.sub('[a-zA-Z\s]', '', version_string)
@@ -29,14 +31,15 @@ def main():
 
     chdir(cwd)
 
-    kernel_dir = "{0}/kernels/{1}".format(args.volk_root, args.namespace)
+    kernel_dir = "{0}/kernels/{1}".format(volk_root, args.namespace)
 
     kernel_files = get_kernel_list(kernel_dir)
 
     kernel_counts = count_kernels(kernel_dir, kernel_files, args.namespace, args.isa_list)
+    kernel_usage = count_usage(gr_root, args.namespace, kernel_counts.keys())
 
     # send in the isa list as a tuple so the order never changes
-    write_table(args.output_file, version_parts, kernel_counts, tuple(args.isa_list))
+    write_table(args.output_file, version_parts, kernel_counts, kernel_usage, tuple(args.isa_list))
 
 def get_kernel_list(kernel_dir):
     '''
@@ -44,6 +47,25 @@ def get_kernel_list(kernel_dir):
     '''
     kernel_files = [ f for f in listdir(kernel_dir) if isfile(join(kernel_dir,f)) ]
     return kernel_files
+
+def count_usage(gr_root, namespace, kernel_list):
+    '''
+    For the given list of kernels in namespace, count the number of users
+    and return a dict of kernels: counts
+    '''
+    #sp_command = ["grep", "-e", "developer", "-f", gr_root + "/COPYING"]
+    #p = subprocess.Popen(sp_command, stdout=subprocess.PIPE, shell=True)
+    #print subprocess.list2cmdline(sp_command)
+    kernel_usage = {}
+    for kernel in kernel_list:
+        full_kernel_name = namespace + '_' + kernel
+        cmd_options = "grep {0} -R {1}/gr-* -o | wc -l".format(full_kernel_name, gr_root)
+        #sp_command = ["grep", full_kernel_name, gr_root+"/gr-*", "|", "wc", "-l"]
+        p = subprocess.check_output(cmd_options, shell=True)
+        kernel_count = p
+        kernel_usage[kernel] = kernel_count
+    return kernel_usage
+    
 
 def count_kernels(kernel_dir, kernel_files, ns, isa_list):
     '''
@@ -76,7 +98,7 @@ def count_isas(file_path, kernel_name, isa_list, ns):
                 counts[isa]['u'] += 1
     return counts
 
-def write_table(output_filename, gr_version, results, isa_list):
+def write_table(output_filename, gr_version, results, kernel_usage, isa_list):
     '''
     Write results dict to html table
     '''
@@ -100,15 +122,18 @@ def write_table(output_filename, gr_version, results, isa_list):
     f.write('<table border="1">\n')
     f.write(' <tr>\n')
     f.write('   <td></td>')
+    f.write('   <td>GNURadio</td>')
     for isa in isa_list:
         f.write(' <td colspan="2">{0}</td>'.format(isa))
     f.write('</tr>\n    <tr>\n')
-    f.write('   <td>Kernel</td>' + ' <td width="20px">u</td><td width="20px">a</td>'*isa_list.__len__() + '</td>')
+    f.write('   <td>Kernel</td><td>Usages</td>') 
+    f.write(' <td width="20px">u</td><td width="20px">a</td>'*isa_list.__len__() + '</td>')
 
     # Write the actual results
     for kernel in sorted(results.keys()):
         row_string = '  <tr>\n'
         row_string += '    <td align="left">{0}</td>\n'.format(kernel)
+        row_string += '    <td align="center">{0}</td>\n'.format(kernel_usage[kernel])
         for isa in isa_list:
             row_string += format_cell(results[kernel][isa])
         row_string += '</tr>\n'
